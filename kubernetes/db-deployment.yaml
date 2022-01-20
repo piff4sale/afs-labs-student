@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-deployment
+  name: db-deployment
   namespace: jkyung
   labels:
-    app: app
+    app: db
 spec:
   replicas: 1
   strategy:
@@ -12,17 +12,17 @@ spec:
   minReadySeconds: 20
   selector:
     matchLabels:
-      app: app
+      app: db
   template:
     metadata:
       labels:
-        app: app
+        app: db
     spec:
       containers:
       - envFrom:
         - secretRef:
             name: db-secret
-        name: app-deployment
-        image: harbor.dev.afsmtddso.com/justin_kyung-harbor-project/app@sha256:de8f0449811ba8cccbb5d55b905b95972ad9427193ba54cc4f6856f16badfd5b
+        name: db-deployment
+        image: harbor.dev.afsmtddso.com/justin_kyung-harbor-project/db@sha256:0a4d6a6114f32e50aa98d21dc49705778a9327f1364cb581702cb133c555f247
         ports:
-        - containerPort: 5000
+        - containerPort: 5432
