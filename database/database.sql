@@ -1,7 +1,7 @@
 --
 -- PostgreSQL database dump
 --
---Comment added /1222
+--Comment adde /1222
 -- Dumped from database version 9.5.4
 -- Dumped by pg_dump version 9.5.4
 
