@@ -1,7 +1,7 @@
 --
 -- PostgreSQL database dump
 --
-
+--Comment added 1/21/2022
 -- Dumped from database version 9.5.4
 -- Dumped by pg_dump version 9.5.4
 
